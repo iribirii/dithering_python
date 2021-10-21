@@ -48,37 +48,37 @@ def cli() -> argparse.Namespace:
         '--bayer',
         default=2,
         type=int,
-        help='Dimmensino of the bayer matrix.'
+        help='Dimension of the bayer matrix.'
     )
     
 
     return parser.parse_args()
 
-def get_bayer(dimmension):
+def get_bayer(dimension):
     '''Returns a bayer matrix
 
-    Returns a bayer matrix of N dimmension that will be used as a template for
+    Returns a bayer matrix of N dimension that will be used as a template for
     the dithering transformation.
     '''
 
     # Dimmension 1 has to be fixed cause that is 'dirty'
-    if dimmension == 1:
+    if dimension == 1:
         bayer = [
             [127, 127],
             [127, 127]
         ]
-    elif dimmension == 2:
+    elif dimension == 2:
         bayer = [
             [ 51, 153],
             [204, 102]
         ]
-    elif dimmension == 3:
+    elif dimension == 3:
         bayer = [
             [ 25, 150,  75],
             [200, 125, 225],
             [100, 175,  50]
         ]
-    elif dimmension == 4:
+    elif dimension == 4:
         bayer = [
             [ 15, 135,  45, 165],
             [195,  75, 225, 105],
@@ -86,7 +86,7 @@ def get_bayer(dimmension):
             [240, 120, 210,  90]
         ]
     else:
-        print('ERROR: not a valid bayer dimmension')
+        print('ERROR: not a valid bayer dimension')
         exit()
 
     return bayer
