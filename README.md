@@ -31,6 +31,10 @@ RGB spectrum with bayer dimension 2, 3 and 4:
 
 ![c b2](/examples/color/color_bayer2.png) ![c b3](/examples/color/color_bayer3.png) ![c b4](/examples/color/color_bayer4.png)
 
+## Animation example:
+
+![animation](/examples/animation/animation.gif)
+
 ## Contributing
 Any pull requests are wolcome. 
 
